@@ -39,28 +39,136 @@ con una interfaz de usuario compleja, y permite la reutilización del código ex
 Enlace de la documentación oficial!
 https://en.bem.info/methodology/quick-start/*/
 
+section {
+    padding: 16px;
+}
+
 /*Sección Menu*/
 
 section.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.menu__header {
+    display: flex;
+    align-items: center;
+}
+
+.menu__title {
+    margin-left: .5rem;
+}
+
+.menu__list {
+    display: none;
 }
 
 /*Sección Title*/
 
 section.title{
+}
 
+.title__profile {
+    width: 98px;
+    height: 98px;
+    border-radius: 50%;
+}
+
+.title__bio {
+    font-weight: 700;
+    line-height: 26px;
+    font-size: 22px;
+}
+
+.title__subsection {
+    font-weight: 400;
+    line-height: 17px;
+    font-size: 14px;
+}
+
+.title__network {
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+}
+
+.title__network__item {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
 }
 
 /*Sección About*/
+.about{
+    background-color: #EAF2FD;
+}
 
-section.about{
+.about__title {
+    font-weight: 700;
+    line-height: 26px;
+    font-size: 22px;
+}
 
+.about__paragraph {
+    font-weight: 400;
+    line-height: 17px;
+    font-size: 14px;
+}
+
+/*Sección Skills*/
+section.skills, section.hobbies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills__title, .hobbies__title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.skills__line, .hobbies__line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.skills__box, .hobbies__box {
+    width: 156px;
+    height: 118px;
+    flex-grow: 1;
+    background-color: #FFFFFF;
+}
+
+.skills__box ul, .hobbies__box ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+}
+
+.skills__img, .hobbies__img {
+    width: 32px;
+    height: 32px;
+}
+
+.skills__name, .hobbies__name {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
 }
 
 /*Sección Hobbies*/
 
 section.hobbies{
-    
+
 }
 
 /* Experiencia Académica*/
@@ -94,11 +202,51 @@ Utiliza las referencias de los breakpoints @media abajo */
 /*Tablet*/
 @media (min-width: 768px) {
 
+    section {
+        padding: 32px;
+    }
+
 /* Menú */
+    .menu__list__item__contato {
+        font-weight: 700;
+    }
 
-/*title*/
+    /*Sección Title*/
 
-/*Skills*/
+    .title__div {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .title__profile {
+        width: 146px;
+        height: 146px;
+    }
+
+    .title__subsection {
+        line-height: 19px;
+        font-size: 16px;
+    }
+
+    .title__network {
+        gap: 32px;
+    }
+
+    .title__network__item {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    /*Sección Skills*/
+
+    .skills__box, .hobbies__box {
+        width: 224px;
+        gap: 8px;
+        padding: 16px;
+    }
 
 /*Hobbies*/
 
@@ -109,15 +257,66 @@ Utiliza las referencias de los breakpoints @media abajo */
 }
 
 /*Mobile*/
-@media (min-width: 425px) {
+@media (min-width: 1024px) {
 
 /*Menu*/
+    .menu > nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
 
-/*Titulo*/
+    .menu__list {
+        display: flex;
+    }
 
-/*Sección sobre mi*/
+    .menu__list__item {
+        margin-right: 32px;
+    }
 
-/*Skills*/
+    /*Sección Title*/
+    .title__profile {
+        width: 368px;
+        height: 368px;
+    }
+
+    .title__bio {
+        line-height: 61px;
+        font-size: 52px;
+    }
+
+    .title__subsection {
+        line-height: 26px;
+        font-size: 22px;
+    }
+
+    .title__network {
+        gap: 32px;
+    }
+
+    .title__network__item {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    /*Sección About*/
+    .about__title {
+        line-height: 38px;
+        font-size: 32px;
+    }
+
+    .about__paragraph {
+        line-height: 18px;
+        font-size: 16px;
+    }
+
+    /*Sección Skills*/
+
+    .skills__box, .hobbies__box {
+        width: 176px;
+        height: 174px;
+    }
 
 /*Hobbies*/
  
