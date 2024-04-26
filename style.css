@@ -27,6 +27,11 @@ a{
     color: var(--cor-de-link);
 }
 
+h4, p {
+    margin: 0;
+    padding: 0;
+}
+
 /*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
 
 Lo que es el BEM?
@@ -165,22 +170,102 @@ section.skills, section.hobbies {
     line-height: 19px;
 }
 
-/*Sección Hobbies*/
-
-section.hobbies{
-
+/* Experiencia Académica*/
+section.academic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EAF2FD;
+    padding: 0;
 }
 
-/* Experiencia Académica*/
+.academic__title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+}
 
-section.academic{
+.academic__courses__box {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
 
+.academic__courses__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0;
+}
+
+.academic__courses__item__img {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.academic__courses__item__img > img {
+    width: 102px;
+    height: 60px;
+    object-fit: contain;
 }
 
 /* experiencia*/
+section.experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-section.experience{
+.experiencie__box:not(:last-child) {
+    margin-bottom: 20px;
+}
 
+.experience__section__title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.experience__img {
+    width: 100%;
+    height: 144px;
+    object-fit: cover;
+}
+
+.experience__title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.experience__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.experience__description {
+    gap: 20px;
+}
+
+.experiencia__botao--repo, .experience__botao--demo {
+    background-color: #FFFFFF;
+    color: #2A7AE4;
+    padding: 12px 16px 12px 16px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    cursor: pointer;
+    border: 1px;
+}
+
+.experience__botao--demo {
+    background-color: #2A7AE4;
+    color: #FFFFFF;
 }
 
 /*Contacto*/
@@ -248,11 +333,33 @@ Utiliza las referencias de los breakpoints @media abajo */
         padding: 16px;
     }
 
-/*Hobbies*/
+    /* Experiencia Académica*/
+    .academic__courses {
+        display: flex;
+        height: auto;
+        gap: 16px;
+        padding: 5px;
+    }
 
-/*Formación Académica*/
+    .academic__courses__item__img {
+        height: 90px;
+    }
 
-/*Experiencia Profesional*/
+    .academic__courses__item__img > img {
+        height: 100%;
+    }
+
+    .experiencie__box:not(:last-child) {
+        margin-bottom: 40px;
+    }
+
+    .experience__img {
+        height: 320px;
+    }
+
+    .experience__description {
+        gap: 25px;
+    }
 
 }
 
@@ -323,6 +430,27 @@ Utiliza las referencias de los breakpoints @media abajo */
 /*Formación Académica*/
 
 /*Experiencia Profesional*/
+    .experiencie__box {
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+    }
+
+    .experiencie__box:nth-child(3) {
+        flex-direction: row-reverse;
+    }
+
+    .experience__info-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .experience__description {
+        display: flex;
+        gap: 5px;
+    }
 
  /*Contacto*/
 
